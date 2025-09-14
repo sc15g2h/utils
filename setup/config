@@ -1,0 +1,121 @@
+# Configureation 
+# List of items to install 
+
+# Homebrew Casks
+CASKS=(
+  google-chrome
+  google-drive
+  spotify
+  mailmate
+  whatsapp
+  discord
+  iterm2
+  visual-studio-code
+  zed
+  github
+  postman
+  macdown
+  microsoft-teams
+  zoom
+  keepassxc
+  logitech-options
+)
+
+# Homebrew Command line tools
+TOOLS=(
+  dockutil
+  tree
+  wget
+  git
+  python
+  python-tk
+  docker
+  k9s
+  helm
+  nvm
+  kubernetes-cli
+  node
+  figlet
+)
+
+# NPM Packages
+NPMPACKAGES=(
+  express
+)
+
+# VSCode Extensions
+VSCODE=(
+  "esbenp.prettier-vscode"
+  "GitHub.copilot"
+  "github.vscode-pull-request-github"
+  "eamodio.gitlens"
+  "ms-kubernetes-tools.vscode-kubernetes-tools"
+  "naumovs.color-highlight"
+  "johnpapa.vscode-peacock"
+  "streetsidesoftware.code-spell-checker"
+  "vscode-icons-team.vscode-icons"
+  "hediet.vscode-drawio"
+  "tyriar.sort-lines"
+  "aaron-bond.better-comments"
+  "oderwat.indent-rainbow"
+  "fabiospampinato.vscode-todo-plus"
+)
+
+# SETTINGS=()
+
+DOCK_ADD=(
+  "/Applications/Google Chrome.app"
+  "/Applications/Whatsapp.app"
+  "/Applications/Spotify.app"
+  "/Applications/iTerm.app"
+  "/Applications/Visual Studio Code.app"
+  "/Applications/GitHub Desktop.app"
+  "/Applications/KeePassXC.app"
+)
+
+DOCK_REMOVE=(
+  "Safari"
+  "FaceTime"
+  "Mail"
+  "News"
+  "Photos"
+  "Contacts"
+  "Messages"
+  "Freeform"
+  "Reminders"
+  "Numbers"
+  "Pages"
+  "Keynote"
+  "Notes"
+  "Photos"
+)
+
+ALIAS=(
+  "k='kubectl'"
+  "kp='kubectl get pods'"
+  "ktl='kubetail'"
+  "kap='k apply -f'"
+  "ksys='k get --namespace kube-system'"
+  "kall='k get all'"
+  "kgn='k get nodes'"
+  "kgp='k get po'"
+  "kgs='k get svc'"
+  "kgi='k get ing'"
+  "kgd='k get deploy'"
+  "kgss='k get statefulsets'"
+  "kgsec='k get secret'"
+  "kgns='k get ns'"
+  "kpf='k port-forward'"
+  "kgpv='k get pv'"
+  "kgpvc='k get pvc'"
+  "kgcm='k get cm'"
+  "dp='kubectl describe pods'"
+  "klogs='kubectl get logs'"
+  "chrome='open -a \"Google Chrome\" '"
+  "pm='open -a \"Postman\"'"
+  "dockerr='open -a \"Docker\"'"
+  "caf='caffeinate -d'"
+)
+
+# HOMEBREW AUTOUPDATE: Configures the frequency of Homebrew package updates in milliseconds.
+HOMEBREW_UPDATE_FREQUENCY=86400 # 24 hours in milliseconds
