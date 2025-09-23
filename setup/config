@@ -19,6 +19,8 @@ CASKS=(
   zoom
   keepassxc
   logitech-options
+  kotlin-native
+  android-studio
 )
 
 # Homebrew Command line tools
