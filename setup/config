@@ -14,13 +14,14 @@ CASKS=(
   zed
   github
   postman
-  macdown
+  macdown-3000
   microsoft-teams
   zoom
   keepassxc
   logitech-options
   kotlin-native
   android-studio
+  displaylink
 )
 
 # Homebrew Command line tools
@@ -95,7 +96,7 @@ DOCK_REMOVE=(
 
 ALIAS=(
   "k='kubectl'"
-  "kp='kubectl get pods'"
+  "kgp='kubectl get pods'"
   "ktl='kubetail'"
   "kap='k apply -f'"
   "ksys='k get --namespace kube-system'"
@@ -118,6 +119,11 @@ ALIAS=(
   "pm='open -a \"Postman\"'"
   "dockerr='open -a \"Docker\"'"
   "caf='caffeinate -d'"
+  "gs='git status'"
+  "ga='git add .'"
+  "gc='git commit -m '"
+  "gp='git push origin $(git rev-parse --abbrev-ref HEAD)'"
+  "gg='git add .; git commit --amend --no-edit; git push origin $(git rev-parse --abbrev-ref HEAD)'"
 )
 
 # HOMEBREW AUTOUPDATE: Configures the frequency of Homebrew package updates in milliseconds.

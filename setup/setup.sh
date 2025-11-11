@@ -124,6 +124,13 @@ echo "${info}Installing Global NPM Packages..."
 npm install -g ${NPMPACKAGES[@]}
 clear
 
+# Install AWS CLI
+echo "\n\n${section} - - - - - - - - - - - - - - - - - - - - - -  I N S T A L L I N G   A W S   C L I  - - - - - - - - - - - - - - - - - - - - - -${reset}"
+curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
+sudo installer -pkg ./AWSCLIV2.pkg -target /
+echo "${info}\nValidating install..."
+which aws
+aws --version
 
 # Cleanup
 echo "\n\n${section} - - - - - - - - - - -  C L E A N I N G   U P . . .   - - - - - - - - - - -${reset}"
@@ -163,6 +170,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo "Removing $app from dock"
     dockutil --remove "$app" &>/dev/null
   done
+  defaults write com.apple.dock show-recents -bool false && killall
 fi
 clear
 
